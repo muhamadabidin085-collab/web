@@ -1,0 +1,105 @@
+/* Agar saat menu diklik gulirannya mulus */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Memberikan jarak agar saat scroll tidak tertutup navbar */
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* --- TEMA WARNA & BAGIAN ATAS (JUMBOTRON) --- */
+.bg-biru {
+    background-color: #0d6efd !important;
+}
+
+.jumbotron {
+    background-color: #e2edee;
+    padding: 6rem 1rem 4rem 1rem;
+}
+
+.profil-bulat {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- ANIMASI GAMBAR PORTOFOLIO --- */
+.wadah-gambar {
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 5px;
+}
+
+.gambar-portofolio {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.wadah-gambar:hover .gambar-portofolio {
+    transform: scale(1.1);
+}
+
+/* --- KODE ANIMASI MURNI CSS (KEYFRAMES) --- */
+@keyframes turunMemudar {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animasi-turun {
+    animation: turunMemudar 1.2s ease-out forwards;
+}
+
+@keyframes naikMemudar {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animasi-naik {
+    opacity: 0;
+    animation: naikMemudar 1s ease-out forwards;
+}
+
+/* Pengaturan Jeda Animasi */
+.jeda-1 {
+    animation-delay: 0.3s;
+}
+
+.jeda-2 {
+    animation-delay: 0.6s;
+}
+
+.jeda-3 {
+    animation-delay: 0.9s;
+}
+
+/* Efek Melayang Pada Tombol */
+.tombol-animasi {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tombol-animasi:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
